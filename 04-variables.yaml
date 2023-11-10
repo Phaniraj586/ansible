@@ -1,0 +1,17 @@
+- name: variables in yaml
+  hosts: mongodb
+  #THis is map
+  #THis is play level variable
+  vars:
+    COURSE: DevOps
+    TRAINER: SivaKumar
+    DURATION: 110 hrs
+  vars: 
+  tasks:
+  - name: Printing hellow World
+    ansible.builtin.debug:
+      msg: "Hello World! I am learning DevOps"
+  - name: Printing Vars
+    ansible.builtin.debug:
+      msg: "Hello WOrld! I am Learning {{COURSE}}, Trainer is {{TRAINER}} and Duration is {{DURATION}}"
+      
