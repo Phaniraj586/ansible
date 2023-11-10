@@ -1,0 +1,16 @@
+name: Revanth Phaniraj
+dob: 01-01-01
+# this is map
+address:
+  city: atp
+  state: AP
+  country: India
+addresses:
+- type: perm
+  city: atp
+  country: India
+- type: current
+  city: bangalore
+  country: India
+
+  
