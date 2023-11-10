@@ -1,8 +1,10 @@
 # Playbook contains multiple plays
-name: ping the node
-hosts: mongodb
-# This is list of tasks
-tasks:
-- name: pinging the server
-  # this is the map
-  ansible.builtin.ping:
+# A playbook is always list of plays
+
+- name: ping the node
+  hosts: mongodb
+  # This is list of tasks
+  tasks:
+  - name: pinging the server
+    # this is the map
+    ansible.builtin.ping:
