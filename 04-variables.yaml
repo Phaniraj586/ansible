@@ -6,12 +6,10 @@
     COURSE: DevOps
     TRAINER: SivaKumar
     DURATION: 110 hrs
-    
-    tasks:
-    - name: Printing hellow World
-      ansible.builtin.debug:
-        msg: "Hello World! I am learning DevOps"
-    - name: Printing Vars
-      ansible.builtin.debug:
-        msg: "Hello WOrld! I am Learning {{COURSE}}, Trainer is {{TRAINER}} and Duration is {{DURATION}}"
-
+  tasks:
+  - name: Printing hellow World
+    ansible.builtin.debug:
+      msg: "Hello World! I am learning DevOps"
+  - name: Printing Vars
+    ansible.builtin.debug:
+      msg: "Hello WOrld! I am Learning {{COURSE}}, Trainer is {{TRAINER}} and Duration is {{DURATION}}"
