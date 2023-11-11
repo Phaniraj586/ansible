@@ -2,9 +2,9 @@
   hosts: localhost
   tasks:
   - name: check roboshop user exist or not
-    ansible.builtin.command: id roboshop
-    register: output
-    ignore_errors: true
+    ansible.builtin.command: id roboshop # when you want to user linus command and if ansible builtin module is not available
+    register: output 
+    ignore_errors: true # if user is not exist ansible is treating as error so we are ignoring that error and handling the error
   - name: print the command output
     ansible.builtin.debug:
       msg: "command output is: {{output}}"
@@ -12,7 +12,7 @@
     ansible.builtin.debug:
       msg: "{{output.rc}}"
   - name: create user roboshop
+    become: yes # we need sudo/admin access for this task only
     ansible.builtin.user:
       name: roboshop
     when: output.rc != 0
-    
