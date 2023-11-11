@@ -1,5 +1,5 @@
 - name: install packages
-  hosts: localhost #mongodb
+  hosts: mongodb
   become: yes
   tasks:
   - name: install packages
@@ -8,4 +8,6 @@
       state: installed
     loop:
     - nginx
-    - postmap
+    - postfix
+    - cyrus-sasl-plain
+    - mailx
