@@ -4,4 +4,5 @@ roboshop-us-dev-db-mongodb-01.devopstools.online
 [mongodb:vars]
 MONGO_USERNAME=mongodbadmin
 MONGO_DB=categories
+NAME=Sivakumar-Inventory
 
