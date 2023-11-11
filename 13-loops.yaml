@@ -1,0 +1,11 @@
+- name: loops example
+  hosts: localhost # you need not give user name and password from the command line as this is for local host
+  tasks:
+  - name: printing from the loop names
+    ansible.builtin.debug:
+      msg: "Hello! i am {{item}}"
+    loop:
+    - Ram
+    - Rahim
+    - Krishna
+
