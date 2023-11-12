@@ -1,5 +1,5 @@
 - name: Install or uninstall softwares
-  host: mongodb
+  hosts: mongodb
   become: yes
   tasks:
   # - name: printing application name
@@ -14,5 +14,3 @@
     - {name: 'postfix', state: 'absent'}
     - {name: 'cyrus-sasl-plain', state: 'absent'}
     - {name: 'mailx', state: 'absent'}
-
-    
