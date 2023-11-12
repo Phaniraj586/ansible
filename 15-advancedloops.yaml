@@ -2,9 +2,9 @@
   host: mongodb
   become: yes
   tasks:
-  - name: printing application name
-  ansible.builtin.debug:
-    msg: "{{item.state}}" "{{item.name}}"
+  # - name: printing application name
+  # ansible.builtin.debug:
+  #   msg: "{{item.state}}" "{{item.name}}"
   - name: installing/removing application
     ansible.builtin.yum:
       name: "{{item.name}}"
