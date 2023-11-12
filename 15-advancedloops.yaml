@@ -5,10 +5,10 @@
   - name: printing application name
     ansible.builtin.debug:
       msg: "{{item.state}}, {{item.name}}"
-    - name: installing/removing application
-      ansible.builtin.yum:
-        name: "{{item.name}}"
-        state: "{{item.state}}"
+  - name: installing/removing application
+    ansible.builtin.yum:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
       loop:
       - {name: 'nginx', state: 'installed'}
       - {name: 'postfix', state: 'absent'}
